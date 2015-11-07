@@ -3,14 +3,16 @@
  * You can safely leave this file untouched, and confine your changes to index.html.
  */
 
+visitor = "jonStewart";
+
 // set up data structures
 window.streams = {};
 streams.home = [];
 streams.users = {};
-streams.users.shawndrost = [];
-streams.users.sharksforcheap = [];
-streams.users.mracus = [];
-streams.users.douglascalhoun = [];
+streams.users.raphael = [];
+streams.users.djgill = [];
+streams.users.dkim1116 = [];
+streams.users.moose = [];
 window.users = Object.keys(streams.users);
 
 // utility function for adding tweets to our data structures
@@ -46,7 +48,7 @@ var generateRandomTweet = function(){
   addTweet(tweet);
 };
 
-for(var i = 0; i < 10; i++){
+for(var i = 0; i < 1; i++){
   generateRandomTweet();
 }
 
@@ -55,6 +57,7 @@ var scheduleNextTweet = function(){
   setTimeout(scheduleNextTweet, Math.random() * 1500);
 };
 scheduleNextTweet();
+
 
 // utility function for letting students add "write a tweet" functionality
 // (note: not used by the rest of this file.)
