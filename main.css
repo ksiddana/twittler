@@ -1,0 +1,217 @@
+div {
+    border: 2px solid #949599;
+    height: 50px;
+    /*margin: 10px;*/
+    /*padding: 0;*/
+    width: 400px;
+    overflow: hidden;
+}
+
+.container {
+    /*border: solid #949599;*/
+    height: 400px;
+    width: 400px;
+    margin: 10px;
+    padding: 5px 0 5px 0;
+    overflow: auto;
+}
+
+.container p {
+  /*color: red;*/
+  word-wrap: break-all;
+  overflow: none;
+  display: inline;
+}
+
+.tweet {
+
+    border: 0;
+    background-color: #e0e2e6;
+    border-radius: 5px;
+    /*border: 0 solid #949599;*/
+    height: 50px;
+    width: auto;
+    margin: 2px;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+.users-container {
+    background-color:white;
+    float: left;
+    border: 2px solid #949599;
+    height: 200px;
+    width: 400px;
+    margin: 10px;
+    padding: 5px 0 5px 0;
+    overflow: auto;
+}
+
+.sub-tweet {
+    border: 0;
+    height: 20px;
+    width: 400px;
+    margin: 2px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.user {
+  font-size: 14px;
+  display: inline;
+}
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*.container {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}*/
+
+
+
+/*
+  ========================================
+  Buttons
+  ========================================
+*/
+
+.btn {
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0;
+}
+
+button {
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+/*
+  ========================================
+  Primary header
+  ========================================
+*/
+.primary-nav {
+  position: relative;
+  background-color: #30ACD6;
+  padding: 20px;
+  height: 60px;
+  width: 400px;
+  margin: 10px;
+  /*background: #000 url(image.jpg) no-repeat center top;*/
+  }
+
+img {
+  /*background: url(twittler.png);*/
+  padding: 0;
+  width: 40px;
+  height: auto;
+  float: right;
+
+}
+
+.primary img:hover {
+  width: 40px;
+  height: auto;
+  background: url();
+}
+
+.primary-nav a {
+  color: #5a5a5a;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  background-color: #e0e2e6;
+}
+
+.primary-nav a:hover {
+  color: green;
+}
+
+.primary-nav li {
+  
+  display: inline;
+}
+
+/*
+  ========================================
+  Links
+  ========================================
+*/
+
+/*a:hover {
+  color: #a9b2b9;
+}
+a {
+  color: #648880;
+}
+.tagline {
+  margin: 66px 0 22px 0;
+}*/
+
+.primary-footer {
+  color: #5a5a5a;
+  font-size: 14px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  width: 400px;
+  background-color: #e0e2e6;
+  margin: 20px 20px 20px 10px;
+}
+.primary-footer small {
+  float: center;
+  font-weight: 400;
+  text-align: center;
+}
+
+.primary-footer li {
+  display: inline;
+}
+
+/*
+  ========================================
+  Body
+  ========================================
+*/
+
+body {
+  /*background: linear-gradient(-45deg, #78ff8c, #b4ffc8);*/
+  height: 500px;
+  outline-width: 700px;
+}
