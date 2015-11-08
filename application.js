@@ -28,22 +28,23 @@ $(document).ready(function(){
       var tweetTime = tweet.created_at;
       //var $user = $('<a>/<a>');
       var $tweet = $('<div class="tweet"></div>');
+      var $tweetAnchorElement = $('<a href="#" class="user"></a>');
+      var $tweetParagraphElement = $('<p></p>');
+      var $tweetTimeTag = $('<p class="day-time"></p>');
       //$tweet.text('@' + tweet.user + ': ' + tweet.message + ' Created at: ' + tweet.created_at');
       
-      $tweet.append(index + ' <a href="#" class="user">@' + user + '</a>');
-      $tweet.append('<p>' + ': ' + tweet.message + '</p>');
-      //$user.text(' !@' + tweet.user);
-      //console.log($user);
+      $tweetAnchorElement.append("@" + user);
+      $tweet.append($tweetAnchorElement);    
       
+      $tweetParagraphElement.append(': ' + tweet.message);
+      $tweet.append($tweetParagraphElement);
+      
+      $tweetTimeTag.append(tweetTime);
+      $tweet.append($tweetTimeTag);
+           
       //$user.appendTo($tweet);
       $('.container').append($tweet);
-      //$tweet.remove('body').children('li');
-
       
-      //$("#content ul").append("<li><a href="/user/messages"><span class="tab">Message Center</span></a></li>");
-      //This removes all the text from the body, but its still keeping it
-      //in order with the timestamps.
-      //$('body').children('li').remove();
       index -= 1;
 
     }
@@ -56,20 +57,21 @@ $(document).ready(function(){
         var userClassTag = $(this).closest('.user').text().toString();
         var userName = userClassTag.substring(1, userClassTag.length);
         var index = streams.users[userName].length - 1;
+        $('.users-container').children('.sub-tweet').remove();
         
         while (index > 0) {
           var usersMessages = streams.users[userName][index].message;
-          var $usersTweets = $('<div class="sub-tweet">');
-          console.log("Message: ", usersMessages);
+          var $usersTweets = $('<div class="sub-tweet"></div>');
+//          console.log("Message: ", usersMessages);
           
-          $usersTweets.append('<p>' + usersMessages + '</p></div>');
-          console.log($usersTweets);
+          $usersTweets.append('<p>' + userClassTag + ": " + usersMessages + '</p>');
+//          console.log($usersTweets);
           $('.users-container').append($usersTweets);
 
           index -= 1;
         }
         //console.log(typeof userName);
-        console.log("username: " + userClassTag + " username: " + userName);
+//        console.log("username: " + userClassTag + " username: " + userName);
         
     }); //end of show users tweet function
 
