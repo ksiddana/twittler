@@ -54,6 +54,7 @@ $(document).ready(function(){
         // var tweet = streams.home[index];
         // console.log(streams.home[index])
         // console.log(tweet.user);
+        $('.users-container').fadeIn(400);
         var userClassTag = $(this).closest('.user').text().toString();
         var userName = userClassTag.substring(1, userClassTag.length);
         var index = streams.users[userName].length - 1;
