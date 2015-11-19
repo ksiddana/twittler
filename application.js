@@ -51,28 +51,26 @@ $(document).ready(function(){
 
     $('.user').on('click', function(event) {
         event.preventDefault();
-        // var tweet = streams.home[index];
-        // console.log(streams.home[index])
-        // console.log(tweet.user);
         $('.users-container').fadeIn(400);
         var userClassTag = $(this).closest('.user').text().toString();
         var userName = userClassTag.substring(1, userClassTag.length);
         var index = streams.users[userName].length - 1;
-        $('.users-container').children('.sub-tweet').remove();
-        
+        $('.users-container').children('.sub-tweet').remove()
+        $('.users-container').children('.user').remove()
+
         while (index > 0) {
+
           var usersMessages = streams.users[userName][index].message;
-          var $usersTweets = $('<div class="sub-tweet"></div>');
-//          console.log("Message: ", usersMessages);
           
-          $usersTweets.append('<p>' + userClassTag + ": " + usersMessages + '</p>');
-//          console.log($usersTweets);
-          $('.users-container').append($usersTweets);
+          var HTMLheaderName = '<p class="user">%data%</p>';
+          var formattedName = HTMLheaderName.replace("%data%", userName + ": ");
+
+          var HTMLuserTweets = '<p class="sub-tweet">%data%</p>';
+          var formattedUserTweets = HTMLuserTweets.replace("%data%", index + " " + usersMessages);
+          $('.users-container').append(formattedName + formattedUserTweets);
 
           index -= 1;
         }
-        //console.log(typeof userName);
-//        console.log("username: " + userClassTag + " username: " + userName);
         
     }); //end of show users tweet function
 

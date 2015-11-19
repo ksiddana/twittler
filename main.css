@@ -138,7 +138,7 @@ button {
   ========================================
 */
 .primary-nav {
-  position: relative;
+  /*position: relative;*/
   background-color: #30ACD6;
   padding: 20px;
   height: 60px;
